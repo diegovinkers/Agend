@@ -21,7 +21,7 @@ function Navbar() {
               </Link>
             </li>            <li>
               <Link
-                to="/tasks"
+                to="/calendar"
                 className="bg-indigo-500 mx-10 px-4 py-1 rounded-md"
               >
                 Tasks

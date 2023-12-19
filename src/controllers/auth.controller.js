@@ -17,10 +17,7 @@ export const register = async (req, res) => {
       newUser = new Professional({ username, email, password: passwordHash });
     } else if (role === "patient") {
       newUser = new Patient({ username, email, password: passwordHash });
-    } else {
-      return res.status(400).json({ message: "Invalid role" });
-    }
-
+    } 
     const userSaved = await newUser.save();
 
     const token = await createAccessToken({ id: userSaved._id, role });

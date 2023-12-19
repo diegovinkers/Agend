@@ -15,6 +15,7 @@ export const UseAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [userVerify, setUserVerify] = useState(null); 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [errors, setErrors] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -69,6 +70,8 @@ export const AuthProvider = ({ children }) => {
         if (res.data) {
           setIsAuthenticated(true);
           setUser(res.data.decodedToken); 
+          setUserVerify(res.data);  
+          console.log(userVerify);
         } else {
           throw new Error('Token verification failed');
         }
@@ -89,6 +92,7 @@ export const AuthProvider = ({ children }) => {
         logout,
         loading,
         user,
+        userVerify,
         isAuthenticated,
         errors,
       }}

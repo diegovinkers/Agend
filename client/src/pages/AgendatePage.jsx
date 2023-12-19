@@ -1,8 +1,8 @@
-function Agend() {
+function AgendatePage() {
     return (
         <div>
             Agend
         </div>
     )
 }
-export default Agend
+export default AgendatePage
