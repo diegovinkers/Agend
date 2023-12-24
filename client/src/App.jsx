@@ -6,6 +6,7 @@ import RegisterProfessionalPage from "./pages/RegisterProfessionalPage";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 
+
 import AgendatePage from "./pages/AgendatePage";
 
 import TasksPage from "./pages/TasksPage";
@@ -21,6 +22,7 @@ import PrivateProfessionalRoute from "./PrivateProfessionalRoute";
 import PrivatePatientRoute from "./PrivatePatientRoute";
 import { TaskProvider } from "./context/TaskContext";
 import Navbar from "./components/Navbar";
+import './App.css';
 
 function App() {
   return (
